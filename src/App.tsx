@@ -152,7 +152,7 @@ function App() {
           <div className="vehicles-grid">
             <div className="vehicle-card glass">
               <div className="vehicle-img-wrapper">
-                <img src="https://plus.unsplash.com/premium_photo-1661274151322-95f7ef5e2361?q=80&w=800&auto=format&fit=crop" alt="Van" className="vehicle-img"/>
+                <img src="https://tyopickup.com/wp-content/uploads/2025/06/car-alphado.jpg" alt="Alphard" className="vehicle-img"/>
               </div>
               <div className="vehicle-info">
                 <h3>토요타 알파드 (Alphard)</h3>
@@ -164,7 +164,7 @@ function App() {
             </div>
             <div className="vehicle-card glass">
               <div className="vehicle-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=800&auto=format&fit=crop" alt="Van" className="vehicle-img"/>
+                <img src="https://tyopickup.com/wp-content/uploads/2025/07/car-hiace-grandcavin.jpg" alt="Hiace" className="vehicle-img"/>
               </div>
               <div className="vehicle-info">
                 <h3>토요타 하이에이스 (Hiace)</h3>
