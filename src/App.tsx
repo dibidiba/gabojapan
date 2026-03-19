@@ -253,6 +253,21 @@ function App() {
           <p>© 2026 GaboJapan. All Rights Reserved.</p>
         </div>
       </footer>
+
+      {/* Floating KakaoTalk Chat Button */}
+      <a 
+        href="https://pf.kakao.com/_airi1234/chat" 
+        target="_blank" 
+        rel="noreferrer"
+        className="floating-kakao"
+      >
+        <span className="floating-kakao-text">실시간 상담</span>
+        <div className="floating-kakao-icon">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="#191919" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3C6.477 3 2 6.582 2 11C2 13.84 3.83 16.34 6.613 17.81C6.73 17.85 6.84 17.9 6.94 17.97L5.46 22.11C5.38 22.42 5.68 22.68 5.96 22.51L10.42 18.88C10.93 18.96 11.46 19 12 19C17.523 19 22 15.418 22 11C22 6.582 17.523 3 12 3Z" />
+          </svg>
+        </div>
+      </a>
     </div>
   );
 }

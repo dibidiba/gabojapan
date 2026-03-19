@@ -558,6 +558,50 @@ ul {
 .w-full { width: 100%; }
 .mt-4 { margin-top: 16px; }
 
+/* Floating KakaoTalk Button */
+.floating-kakao {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  animation: bounce 2s infinite;
+  transition: transform 0.3s;
+}
+.floating-kakao:hover {
+  transform: scale(1.05);
+  animation: none;
+}
+.floating-kakao-icon {
+  width: 65px;
+  height: 65px;
+  background-color: #FEE500;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+.floating-kakao-text {
+  background: white;
+  color: var(--text-dark);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  white-space: nowrap;
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
 /* Responsive adjustments for Mobile */
 @media (max-width: 768px) {
   .section { padding: 60px 0; }
@@ -579,4 +623,12 @@ ul {
   .features-content { gap: 30px; }
   .feature-list li { flex-direction: column; align-items: flex-start; gap: 10px; }
   .feature-list-icon { width: 40px; height: 40px; }
+  .floating-kakao {
+    bottom: 20px;
+    right: 20px;
+  }
+  .floating-kakao-icon {
+    width: 55px;
+    height: 55px;
+  }
 }
