@@ -232,8 +232,21 @@ function App() {
            </div>
            <div className="footer-contact">
              <h4>예약 및 문의</h4>
-             <p className="flex-align"><Phone size={18} className="mr-2"/> 카카오톡: gabojapan_official</p>
-             <p className="flex-align"><MapPin size={18} className="mr-2"/> 고객센터: 09:00 - 18:00 (연중무휴)</p>
+             <div style={{ marginBottom: '16px' }}>
+               <a 
+                 href="http://qr.kakao.com/talk/airi1234"
+                 target="_blank"
+                 rel="noreferrer"
+                 className="flex-align"
+                 style={{ display: 'inline-flex', padding: '12px 24px', background: '#FEE500', color: '#191919', borderRadius: '30px', fontWeight: '700', textDecoration: 'none', boxShadow: '0 4px 15px rgba(254, 229, 0, 0.3)' }}
+               >
+                 <svg width="20" height="20" viewBox="0 0 24 24" fill="#191919" xmlns="http://www.w3.org/2000/svg" className="mr-2">
+                   <path d="M12 3C6.477 3 2 6.582 2 11C2 13.84 3.83 16.34 6.613 17.81C6.73 17.85 6.84 17.9 6.94 17.97L5.46 22.11C5.38 22.42 5.68 22.68 5.96 22.51L10.42 18.88C10.93 18.96 11.46 19 12 19C17.523 19 22 15.418 22 11C22 6.582 17.523 3 12 3Z" />
+                 </svg>
+                 카카오톡 상담하기 (ID: airi1234)
+               </a>
+             </div>
+             <p className="flex-align" style={{ color: 'rgba(255,255,255,0.7)' }}><Phone size={18} className="mr-2"/> 고객센터: 09:00 - 18:00 (연중무휴)</p>
            </div>
         </div>
         <div className="footer-bottom">
