@@ -234,7 +234,7 @@ function App() {
              <h4>예약 및 문의</h4>
              <div style={{ marginBottom: '16px' }}>
                <a 
-                 href="http://qr.kakao.com/talk/airi1234"
+                 href="https://pf.kakao.com/_airi1234/chat"
                  target="_blank"
                  rel="noreferrer"
                  className="flex-align"
