@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Plane, Map, Car, Shield, Phone, ChevronRight, Star, MapPin, CheckCircle } from 'lucide-react';
+import { Plane, Map, Car, Shield, Phone, ChevronRight, Star, MapPin, CheckCircle, Mail } from 'lucide-react';
 import './index.css';
 
 function App() {
@@ -247,6 +247,7 @@ function App() {
                </a>
              </div>
              <p className="flex-align" style={{ color: 'rgba(255,255,255,0.7)' }}><Phone size={18} className="mr-2"/> 고객센터: 090-6560-3736 (09:00 - 18:00 연중무휴)</p>
+             <p className="flex-align" style={{ color: 'rgba(255,255,255,0.7)', marginTop: '8px' }}><Mail size={18} className="mr-2"/> 이메일: info@gabojapan.com</p>
            </div>
         </div>
         <div className="footer-bottom">
