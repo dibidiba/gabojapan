@@ -247,7 +247,7 @@ function App() {
                </a>
              </div>
              <p className="flex-align" style={{ color: 'rgba(255,255,255,0.7)' }}><Phone size={18} className="mr-2"/> 고객센터: 090-6560-3736 (09:00 - 18:00 연중무휴)</p>
-             <p className="flex-align" style={{ color: 'rgba(255,255,255,0.7)', marginTop: '8px' }}><Mail size={18} className="mr-2"/> 이메일: info@gabojapan.com</p>
+             <p className="flex-align" style={{ color: 'rgba(255,255,255,0.7)', marginTop: '8px' }}><Mail size={18} className="mr-2"/> 이메일: <a href="mailto:info@gabojapan.com" style={{ color: 'inherit', textDecoration: 'underline', marginLeft: '4px' }}>info@gabojapan.com</a></p>
            </div>
         </div>
         <div className="footer-bottom">
