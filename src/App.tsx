@@ -255,20 +255,38 @@ function App() {
         </div>
       </footer>
 
-      {/* Floating KakaoTalk Chat Button */}
-      <a 
-        href="https://pf.kakao.com/_airi1234/chat" 
-        target="_blank" 
-        rel="noreferrer"
-        className="floating-kakao"
-      >
-        <span className="floating-kakao-text">실시간 상담</span>
-        <div className="floating-kakao-icon">
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="#191919" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 3C6.477 3 2 6.582 2 11C2 13.84 3.83 16.34 6.613 17.81C6.73 17.85 6.84 17.9 6.94 17.97L5.46 22.11C5.38 22.42 5.68 22.68 5.96 22.51L10.42 18.88C10.93 18.96 11.46 19 12 19C17.523 19 22 15.418 22 11C22 6.582 17.523 3 12 3Z" />
-          </svg>
-        </div>
-      </a>
+      {/* Floating Chat Buttons */}
+      <div className="floating-actions">
+        {/* LINE Chat Button */}
+        <a 
+          href="https://line.me/R/ti/p/@airi1234" 
+          target="_blank" 
+          rel="noreferrer"
+          className="floating-btn line-btn"
+        >
+          <span className="floating-text">LINE 상담</span>
+          <div className="floating-icon">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.5 10.5C22.5 5.53 17.79 1.5 12 1.5C6.21 1.5 1.5 5.53 1.5 10.5C1.5 15.01 5.48 18.79 10.45 19.38C10.84 19.46 11.16 19.72 11.23 20.12C11.3 20.5 11.23 21.05 11.23 21.05C11.23 21.05 11.1 22.13 11.05 22.52C10.95 23.33 11.51 22.86 11.83 22.63C12.15 22.4 17.38 18.42 19.98 15.11C21.6 13.06 22.5 11.84 22.5 10.5Z" />
+            </svg>
+          </div>
+        </a>
+
+        {/* KakaoTalk Chat Button */}
+        <a 
+          href="https://pf.kakao.com/_airi1234/chat" 
+          target="_blank" 
+          rel="noreferrer"
+          className="floating-btn kakao-btn"
+        >
+          <span className="floating-text">카톡 상담</span>
+          <div className="floating-icon">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="#191919" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 3C6.477 3 2 6.582 2 11C2 13.84 3.83 16.34 6.613 17.81C6.73 17.85 6.84 17.9 6.94 17.97L5.46 22.11C5.38 22.42 5.68 22.68 5.96 22.51L10.42 18.88C10.93 18.96 11.46 19 12 19C17.523 19 22 15.418 22 11C22 6.582 17.523 3 12 3Z" />
+            </svg>
+          </div>
+        </a>
+      </div>
     </div>
   );
 }
