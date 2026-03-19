@@ -246,7 +246,7 @@ function App() {
                  카카오톡 상담하기 (ID: airi1234)
                </a>
              </div>
-             <p className="flex-align" style={{ color: 'rgba(255,255,255,0.7)' }}><Phone size={18} className="mr-2"/> 고객센터 (09:00 - 18:00): 090-6560-3736</p>
+             <p className="flex-align" style={{ color: 'rgba(255,255,255,0.7)' }}><Phone size={18} className="mr-2"/> 090-6560-3736 (고객센터 09:00 - 18:00)</p>
            </div>
         </div>
         <div className="footer-bottom">
