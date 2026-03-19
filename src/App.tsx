@@ -138,7 +138,7 @@ function App() {
           </div>
           <div className="features-image-wrapper">
              <div className="glass image-card">
-               <img src="https://images.unsplash.com/photo-1542051841857-1916115664d1?auto=format&fit=crop&q=80&w=800" alt="Japan Taxi" className="feature-image" />
+               <img src="kind-driver.png" alt="Kind Japanese Driver" className="feature-image" />
              </div>
           </div>
         </div>
