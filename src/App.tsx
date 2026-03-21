@@ -37,23 +37,23 @@ function App() {
           <img src="cherry-blossom.png" alt="Japan Sakura Travel" className="hero-img" />
           <div className="hero-overlay"></div>
         </div>
-        
+
         <div className="container hero-content animate-fade-in">
           <span className="badge glass">🌸 프리미엄 일본 여행의 시작</span>
           <h1 className="hero-title">
-            벚꽃 흩날리는 여행,<br/>
-            <span className="highlight">가보재팬</span>이 함께합니다.
+            벚꽃 흩날리는 여행,<br />
+            <span className="highlight">가보자재팬</span>이 함께합니다.
           </h1>
           <p className="hero-subtitle">
             도쿄 공항 송영부터 후지산, 하코네, 디즈니랜드까지.<br />신뢰할 수 있는 전문 단독 픽업 서비스로 편안한 여행을 만드세요.
           </p>
           <div className="hero-actions">
-             <a href="#booking" className="btn btn-primary btn-lg">
-               간편 예약하기 <ChevronRight size={20} />
-             </a>
-             <a href="#services" className="btn btn-glass btn-lg">
-               서비스 둘러보기
-             </a>
+            <a href="#booking" className="btn btn-primary btn-lg">
+              간편 예약하기 <ChevronRight size={20} />
+            </a>
+            <a href="#services" className="btn btn-glass btn-lg">
+              서비스 둘러보기
+            </a>
           </div>
         </div>
       </section>
@@ -79,9 +79,9 @@ function App() {
       {/* Services Section */}
       <section id="services" className="section bg-light">
         <div className="container text-center">
-          <h2 className="section-title">가보재팬과 함께하는 여행</h2>
+          <h2 className="section-title">가보자재팬과 함께하는 여행</h2>
           <p className="section-description">공항 픽업부터 당일치기 근교 투어까지 완벽하게 준비되어 있습니다.</p>
-          
+
           <div className="services-grid">
             <div className="service-card">
               <div className="service-icon"><Plane size={32} /></div>
@@ -111,7 +111,7 @@ function App() {
       <section id="about" className="section features-section">
         <div className="container features-content">
           <div className="features-text">
-            <h2 className="section-title text-left">왜 가보재팬인가요?</h2>
+            <h2 className="section-title text-left">왜 가보자재팬인가요?</h2>
             <ul className="feature-list">
               <li>
                 <div className="feature-list-icon"><Shield size={24} /></div>
@@ -137,9 +137,9 @@ function App() {
             </ul>
           </div>
           <div className="features-image-wrapper">
-             <div className="glass image-card">
-               <img src="kind-driver.png" alt="Kind Japanese Driver" className="feature-image" />
-             </div>
+            <div className="glass image-card">
+              <img src="kind-driver.png" alt="Kind Japanese Driver" className="feature-image" />
+            </div>
           </div>
         </div>
       </section>
@@ -152,25 +152,25 @@ function App() {
           <div className="vehicles-grid">
             <div className="vehicle-card glass">
               <div className="vehicle-img-wrapper">
-                <img src="https://tyopickup.com/wp-content/uploads/2025/06/car-alphado.jpg" alt="Alphard" className="vehicle-img"/>
+                <img src="https://tyopickup.com/wp-content/uploads/2025/06/car-alphado.jpg" alt="Alphard" className="vehicle-img" />
               </div>
               <div className="vehicle-info">
                 <h3>토요타 알파드 (Alphard)</h3>
-                <p>최대 탑승: 6인 / 수하물: 4개</p>
+                <p>최대 탑승: 5인 / 수하물: 4개</p>
                 <div className="vehicle-features">
-                  <span className="v-badge"><CheckCircle size={14} className="mr-1"/> VIP 의전</span>
+                  <span className="v-badge"><CheckCircle size={14} className="mr-1" /> VIP 의전</span>
                 </div>
               </div>
             </div>
             <div className="vehicle-card glass">
               <div className="vehicle-img-wrapper">
-                <img src="https://tyopickup.com/wp-content/uploads/2025/07/car-hiace-grandcavin.jpg" alt="Hiace" className="vehicle-img"/>
+                <img src="https://tyopickup.com/wp-content/uploads/2025/07/car-hiace-grandcavin.jpg" alt="Hiace" className="vehicle-img" />
               </div>
               <div className="vehicle-info">
                 <h3>토요타 하이에이스 (Hiace)</h3>
                 <p>최대 탑승: 9인 / 수하물: 10개</p>
                 <div className="vehicle-features">
-                  <span className="v-badge"><CheckCircle size={14} className="mr-1"/> 대가족 추천</span>
+                  <span className="v-badge"><CheckCircle size={14} className="mr-1" /> 대가족 추천</span>
                 </div>
               </div>
             </div>
@@ -183,26 +183,26 @@ function App() {
         <div className="container text-center">
           <h2 className="section-title">합리적이고 투명한 요금</h2>
           <p className="section-description">추가 비용 없이 모든 것을 포함한 안심 요금제입니다.</p>
-          
+
           <div className="pricing-grid">
             <div className="pricing-card">
               <h3>하네다 공항 픽업</h3>
-              <div className="price"><span>¥</span>20,000<span>~</span></div>
+              <div className="price"><span>¥</span>25,000<span>~</span></div>
               <ul className="pricing-features text-left">
-                <li><CheckCircle size={16}/> 도쿄 23구 내 편도 이동</li>
-                <li><CheckCircle size={16}/> 무료 대기 90분</li>
-                <li><CheckCircle size={16}/> 통행료 등 포함</li>
+                <li><CheckCircle size={16} /> 도쿄 23구 내 편도 이동</li>
+                <li><CheckCircle size={16} /> 무료 대기 90분</li>
+                <li><CheckCircle size={16} /> 통행료 등 포함</li>
               </ul>
               <button className="btn btn-primary w-full mt-4">예약 문의</button>
             </div>
             <div className="pricing-card popular">
               <div className="popular-badge">가장 인기</div>
               <h3>나리타 공항 픽업</h3>
-              <div className="price"><span>¥</span>25,000<span>~</span></div>
+              <div className="price"><span>¥</span>35,000<span>~</span></div>
               <ul className="pricing-features text-left">
-                <li><CheckCircle size={16}/> 도쿄 23구 내 편도 이동</li>
-                <li><CheckCircle size={16}/> 무료 대기 90분</li>
-                <li><CheckCircle size={16}/> 통행료 등 포함</li>
+                <li><CheckCircle size={16} /> 도쿄 23구 내 편도 이동</li>
+                <li><CheckCircle size={16} /> 무료 대기 90분</li>
+                <li><CheckCircle size={16} /> 통행료 등 포함</li>
               </ul>
               <button className="btn btn-primary w-full mt-4">예약 문의</button>
             </div>
@@ -210,9 +210,9 @@ function App() {
               <h3>맞춤 일일 투어</h3>
               <div className="price"><span>¥</span>55,000<span>~</span></div>
               <ul className="pricing-features text-left">
-                <li><CheckCircle size={16}/> 도쿄/후지산/하코네 (10h)</li>
-                <li><CheckCircle size={16}/> 일정 자유 조정</li>
-                <li><CheckCircle size={16}/> 전용차 단독 운영</li>
+                <li><CheckCircle size={16} /> 도쿄/후지산/하코네 (10h)</li>
+                <li><CheckCircle size={16} /> 일정 자유 조정</li>
+                <li><CheckCircle size={16} /> 전용차 단독 운영</li>
               </ul>
               <button className="btn btn-primary w-full mt-4">예약 문의</button>
             </div>
@@ -223,32 +223,32 @@ function App() {
       {/* Footer / Contact */}
       <footer id="contact" className="footer">
         <div className="container footer-content">
-           <div className="footer-brand">
-             <div className="logo mb-4">
+          <div className="footer-brand">
+            <div className="logo mb-4">
               <Plane size={24} className="logo-icon white" />
               <span>GaboJapan</span>
-             </div>
-             <p className="footer-desc">당신의 편안하고 아름다운 일본 여행을 책임집니다.</p>
-           </div>
-           <div className="footer-contact">
-             <h4>예약 및 문의</h4>
-             <div style={{ marginBottom: '16px' }}>
-               <a 
-                 href="https://pf.kakao.com/_airi1234/chat"
-                 target="_blank"
-                 rel="noreferrer"
-                 className="flex-align"
-                 style={{ display: 'inline-flex', padding: '12px 24px', background: '#FEE500', color: '#191919', borderRadius: '30px', fontWeight: '700', textDecoration: 'none', boxShadow: '0 4px 15px rgba(254, 229, 0, 0.3)' }}
-               >
-                 <svg width="20" height="20" viewBox="0 0 24 24" fill="#191919" xmlns="http://www.w3.org/2000/svg" className="mr-2">
-                   <path d="M12 3C6.477 3 2 6.582 2 11C2 13.84 3.83 16.34 6.613 17.81C6.73 17.85 6.84 17.9 6.94 17.97L5.46 22.11C5.38 22.42 5.68 22.68 5.96 22.51L10.42 18.88C10.93 18.96 11.46 19 12 19C17.523 19 22 15.418 22 11C22 6.582 17.523 3 12 3Z" />
-                 </svg>
-                 카카오톡 상담하기 (ID: airi1234)
-               </a>
-             </div>
-             <p className="flex-align" style={{ color: 'rgba(255,255,255,0.7)' }}><Phone size={18} className="mr-2"/> 고객센터: 090-6560-3736 (09:00 - 18:00 연중무휴)</p>
-             <p className="flex-align" style={{ color: 'rgba(255,255,255,0.7)', marginTop: '8px' }}><Mail size={18} className="mr-2"/> 이메일: <a href="mailto:info@gabojapan.com" style={{ color: 'inherit', textDecoration: 'underline', marginLeft: '4px' }}>info@gabojapan.com</a></p>
-           </div>
+            </div>
+            <p className="footer-desc">당신의 편안하고 아름다운 일본 여행을 책임집니다.</p>
+          </div>
+          <div className="footer-contact">
+            <h4>예약 및 문의</h4>
+            <div style={{ marginBottom: '16px' }}>
+              <a
+                href="https://pf.kakao.com/_airi1234/chat"
+                target="_blank"
+                rel="noreferrer"
+                className="flex-align"
+                style={{ display: 'inline-flex', padding: '12px 24px', background: '#FEE500', color: '#191919', borderRadius: '30px', fontWeight: '700', textDecoration: 'none', boxShadow: '0 4px 15px rgba(254, 229, 0, 0.3)' }}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#191919" xmlns="http://www.w3.org/2000/svg" className="mr-2">
+                  <path d="M12 3C6.477 3 2 6.582 2 11C2 13.84 3.83 16.34 6.613 17.81C6.73 17.85 6.84 17.9 6.94 17.97L5.46 22.11C5.38 22.42 5.68 22.68 5.96 22.51L10.42 18.88C10.93 18.96 11.46 19 12 19C17.523 19 22 15.418 22 11C22 6.582 17.523 3 12 3Z" />
+                </svg>
+                카카오톡 상담하기 (ID: airi1234)
+              </a>
+            </div>
+            <p className="flex-align" style={{ color: 'rgba(255,255,255,0.7)' }}><Phone size={18} className="mr-2" /> 고객센터: 090-6560-3736 (09:00 - 18:00 연중무휴)</p>
+            <p className="flex-align" style={{ color: 'rgba(255,255,255,0.7)', marginTop: '8px' }}><Mail size={18} className="mr-2" /> 이메일: <a href="mailto:info@gabojapan.com" style={{ color: 'inherit', textDecoration: 'underline', marginLeft: '4px' }}>info@gabojapan.com</a></p>
+          </div>
         </div>
         <div className="footer-bottom">
           <p>© 2026 GaboJapan. All Rights Reserved.</p>
@@ -258,9 +258,9 @@ function App() {
       {/* Floating Chat Buttons */}
       <div className="floating-actions">
         {/* LINE Chat Button */}
-        <a 
-          href="https://line.me/R/ti/p/@airi1234" 
-          target="_blank" 
+        <a
+          href="https://line.me/R/ti/p/@airi1234"
+          target="_blank"
           rel="noreferrer"
           className="floating-btn line-btn"
         >
@@ -273,9 +273,9 @@ function App() {
         </a>
 
         {/* KakaoTalk Chat Button */}
-        <a 
-          href="https://pf.kakao.com/_airi1234/chat" 
-          target="_blank" 
+        <a
+          href="https://pf.kakao.com/_airi1234/chat"
+          target="_blank"
           rel="noreferrer"
           className="floating-btn kakao-btn"
         >
