@@ -116,8 +116,13 @@ function App() {
               <li>
                 <div className="feature-list-icon"><Shield size={24} /></div>
                 <div>
-                  <h4>합법적인 운행 및 안심보험</h4>
-                  <p>공식 허가를 받은 청록색 번호판 영업용 차량만을 운행하며, 승객 보험이 가입되어 있습니다.</p>
+                  <h4 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    합법적인 운행 및 안심보험
+                    <span style={{ fontSize: '0.75rem', background: 'rgba(6, 199, 85, 0.1)', color: '#06C755', padding: '4px 10px', borderRadius: '20px', fontWeight: '800' }}>정식 인가</span>
+                  </h4>
+                  <p style={{ background: 'rgba(6, 199, 85, 0.05)', padding: '12px 16px', borderRadius: '12px', borderLeft: '4px solid #06C755', marginTop: '8px' }}>
+                    <strong style={{ color: '#06C755', fontWeight: '700' }}>공식 허가를 받은 청록색 번호판 영업용 차량</strong>만을 운행하며, <strong style={{ fontWeight: '700' }}>승객 보험이 가입</strong>되어 있습니다.
+                  </p>
                 </div>
               </li>
               <li>
