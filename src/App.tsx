@@ -1,9 +1,41 @@
 import { useEffect, useState } from 'react';
-import { Plane, Map, Car, Shield, Phone, ChevronRight, Star, MapPin, CheckCircle, Mail } from 'lucide-react';
+import { Plane, Map, Car, Shield, Phone, ChevronRight, Star, MapPin, CheckCircle, Mail, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './index.css';
+
+const heroImages = [
+  'sakura_fuji_composite.png',
+  'cherry-blossom.png',
+  'sakura_2.png',
+  'sakura_3.png',
+  'sakura_4.png'
+];
+
+const SakuraPetals = () => {
+  return (
+    <div className="sakura-container">
+      {[...Array(30)].map((_, i) => (
+        <div
+          key={i}
+          className="petal"
+          style={{
+            left: `${Math.random() * 100}%`,
+            width: `${Math.random() * 10 + 8}px`,
+            height: `${Math.random() * 10 + 8}px`,
+            animationDuration: `${Math.random() * 8 + 7}s`,
+            animationDelay: `${Math.random() * 10}s`,
+            opacity: Math.random() * 0.5 + 0.3,
+          }}
+        />
+      ))}
+    </div>
+  );
+};
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [showLineQR, setShowLineQR] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -11,6 +43,13 @@ function App() {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -26,7 +65,7 @@ function App() {
             <a href="#services">서비스 안내</a>
             <a href="#about">특장점</a>
             <a href="#pricing">이용요금</a>
-            <a href="#contact" className="btn btn-primary btn-sm">문의하기</a>
+            <Link to="/contact" className="btn btn-primary btn-sm">문의하기</Link>
           </div>
         </div>
       </nav>
@@ -34,8 +73,16 @@ function App() {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-bg">
-          <img src="cherry-blossom.png" alt="Japan Sakura Travel" className="hero-img" />
+          {heroImages.map((src, index) => (
+            <img
+              key={src}
+              src={src}
+              alt={`Japan Sakura Travel ${index + 1}`}
+              className={`hero-img ${index === currentImageIndex ? 'active' : ''}`}
+            />
+          ))}
           <div className="hero-overlay"></div>
+          <SakuraPetals />
         </div>
 
         <div className="container hero-content animate-fade-in">
@@ -48,9 +95,9 @@ function App() {
             도쿄 공항 송영부터 후지산, 하코네, 디즈니랜드까지.<br />신뢰할 수 있는 전문 단독 픽업 서비스로 편안한 여행을 만드세요.
           </p>
           <div className="hero-actions">
-            <a href="#booking" className="btn btn-primary btn-lg">
+            <Link to="/contact" className="btn btn-primary btn-lg">
               간편 예약하기 <ChevronRight size={20} />
-            </a>
+            </Link>
             <a href="#services" className="btn btn-glass btn-lg">
               서비스 둘러보기
             </a>
@@ -198,7 +245,7 @@ function App() {
                 <li><CheckCircle size={16} /> 무료 대기 90분</li>
                 <li><CheckCircle size={16} /> 통행료 등 포함</li>
               </ul>
-              <button className="btn btn-primary w-full mt-4">예약 문의</button>
+              <Link to="/contact" className="btn btn-primary w-full mt-4">예약 문의</Link>
             </div>
             <div className="pricing-card popular">
               <div className="popular-badge">가장 인기</div>
@@ -209,7 +256,7 @@ function App() {
                 <li><CheckCircle size={16} /> 무료 대기 90분</li>
                 <li><CheckCircle size={16} /> 통행료 등 포함</li>
               </ul>
-              <button className="btn btn-primary w-full mt-4">예약 문의</button>
+              <Link to="/contact" className="btn btn-primary w-full mt-4">예약 문의</Link>
             </div>
             <div className="pricing-card">
               <h3>맞춤 일일 투어</h3>
@@ -219,7 +266,7 @@ function App() {
                 <li><CheckCircle size={16} /> 일정 자유 조정</li>
                 <li><CheckCircle size={16} /> 전용차 단독 운영</li>
               </ul>
-              <button className="btn btn-primary w-full mt-4">예약 문의</button>
+              <Link to="/contact" className="btn btn-primary w-full mt-4">예약 문의</Link>
             </div>
           </div>
         </div>
@@ -252,7 +299,7 @@ function App() {
               </a>
             </div>
             <p className="flex-align" style={{ color: 'rgba(255,255,255,0.7)' }}><Phone size={18} className="mr-2" /> 고객센터: +81-90-6560-3736 (09:00 - 18:00 연중무휴)</p>
-            <p className="flex-align" style={{ color: 'rgba(255,255,255,0.7)', marginTop: '8px' }}><Mail size={18} className="mr-2" /> 이메일: <a href="mailto:info@gabojapan.com" style={{ color: 'inherit', textDecoration: 'underline', marginLeft: '4px' }}>info@gabojapan.com</a></p>
+            <p className="flex-align" style={{ color: 'rgba(255,255,255,0.7)', marginTop: '8px' }}><Mail size={18} className="mr-2" /> 이메일: <a href="mailto:gabojapan@outlook.jp" style={{ color: 'inherit', textDecoration: 'underline', marginLeft: '4px' }}>gabojapan@outlook.jp</a></p>
           </div>
         </div>
         <div className="footer-bottom">
@@ -263,11 +310,10 @@ function App() {
       {/* Floating Chat Buttons */}
       <div className="floating-actions">
         {/* LINE Chat Button */}
-        <a
-          href="https://line.me/R/ti/p/@airi1234"
-          target="_blank"
-          rel="noreferrer"
+        <button
+          onClick={() => setShowLineQR(true)}
           className="floating-btn line-btn"
+          style={{ border: 'none', background: 'none', cursor: 'pointer', padding: 0 }}
         >
           <span className="floating-text">LINE 상담</span>
           <div className="floating-icon">
@@ -275,7 +321,7 @@ function App() {
               <path d="M22.5 10.5C22.5 5.53 17.79 1.5 12 1.5C6.21 1.5 1.5 5.53 1.5 10.5C1.5 15.01 5.48 18.79 10.45 19.38C10.84 19.46 11.16 19.72 11.23 20.12C11.3 20.5 11.23 21.05 11.23 21.05C11.23 21.05 11.1 22.13 11.05 22.52C10.95 23.33 11.51 22.86 11.83 22.63C12.15 22.4 17.38 18.42 19.98 15.11C21.6 13.06 22.5 11.84 22.5 10.5Z" />
             </svg>
           </div>
-        </a>
+        </button>
 
         {/* KakaoTalk Chat Button */}
         <a
@@ -292,6 +338,29 @@ function App() {
           </div>
         </a>
       </div>
+
+      {/* LINE QR Modal */}
+      {showLineQR && (
+        <div className="modal-overlay" onClick={() => setShowLineQR(false)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setShowLineQR(false)}>
+              <X size={20} />
+            </button>
+            <h2 className="modal-title">LINE 상담 안내</h2>
+            <p className="modal-subtitle">아래 QR코드를 스캔하여 친구 추가 후<br />무엇이든 문의해 주세요!</p>
+            <img src="/line-qr.png" alt="LINE QR Code" className="qr-image" />
+            <a 
+              href="https://line.me/R/ti/p/@airi1234" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="btn btn-primary w-full"
+              style={{ background: '#06C755', borderColor: '#06C755' }}
+            >
+              LINE 앱으로 열기
+            </a>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
