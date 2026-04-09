@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Plane, MapPin, Phone, Mail, Clock, ChevronRight, Send, CheckCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, ChevronRight, Send, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 function ContactPage() {
