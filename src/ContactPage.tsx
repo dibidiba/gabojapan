@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { MapPin, Phone, Mail, Clock, ChevronRight, Send, CheckCircle } from 'lucide-react';
+import { Plane, MapPin, Phone, Mail, Clock, ChevronRight, Send, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 function ContactPage() {
@@ -68,7 +68,7 @@ function ContactPage() {
       <nav className={`navbar ${scrolled ? 'nav-scrolled' : ''}`}>
         <div className="container nav-content">
           <Link to="/" className="logo">
-            <img src="/logo.png" alt="GaboJapan Logo" style={{ height: '36px', marginRight: '8px' }} />
+            <Plane size={28} className="logo-icon" />
             <span>GaboJapan</span>
           </Link>
           <div className="nav-links">
@@ -243,8 +243,8 @@ function ContactPage() {
         <div className="container footer-content">
           <div className="footer-brand">
             <Link to="/" className="logo mb-4">
-              <img src="/logo.png" alt="GaboJapan Logo" style={{ height: '36px', marginRight: '8px', filter: 'brightness(0) invert(1)' }} />
-              <span style={{ color: 'white' }}>GaboJapan</span>
+              <Plane size={24} className="logo-icon white" />
+              <span>GaboJapan</span>
             </Link>
             <p className="footer-desc">당신의 편안하고 아름다운 일본 여행을 책임집니다.</p>
           </div>
