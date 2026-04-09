@@ -29,7 +29,7 @@ function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    fetch("https://formsubmit.co/ajax/gabojapan@outlook.jp", {
+    fetch("https://formsubmit.co/ajax/gaboja@gabojapan.com", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -68,8 +68,7 @@ function ContactPage() {
       <nav className={`navbar ${scrolled ? 'nav-scrolled' : ''}`}>
         <div className="container nav-content">
           <Link to="/" className="logo">
-            <Plane size={28} className="logo-icon" />
-            <span>GaboJapan</span>
+            <img src="/logo.png" alt="GaboJapan Logo" style={{ height: '40px' }} />
           </Link>
           <div className="nav-links">
             <Link to="/#services">서비스 안내</Link>
@@ -134,7 +133,7 @@ function ContactPage() {
                 </div>
                 <div>
                   <h4>이메일</h4>
-                  <p><a href="mailto:gabojapan@outlook.jp">gabojapan@outlook.jp</a></p>
+                  <p><a href="mailto:gaboja@gabojapan.com">gaboja@gabojapan.com</a></p>
                 </div>
               </div>
 
@@ -243,8 +242,7 @@ function ContactPage() {
         <div className="container footer-content">
           <div className="footer-brand">
             <Link to="/" className="logo mb-4">
-              <Plane size={24} className="logo-icon white" />
-              <span>GaboJapan</span>
+              <img src="/logo.png" alt="GaboJapan Logo" style={{ height: '40px', filter: 'brightness(0) invert(1)' }} />
             </Link>
             <p className="footer-desc">당신의 편안하고 아름다운 일본 여행을 책임집니다.</p>
           </div>
@@ -265,7 +263,7 @@ function ContactPage() {
               </a>
             </div>
             <p className="flex-align" style={{ color: 'rgba(255,255,255,0.7)' }}><Phone size={18} className="mr-2" /> 고객센터: +81-90-6560-3736 (09:00 - 18:00 연중무휴)</p>
-            <p className="flex-align" style={{ color: 'rgba(255,255,255,0.7)', marginTop: '8px' }}><Mail size={18} className="mr-2" /> 이메일: <a href="mailto:gabojapan@outlook.jp" style={{ color: 'inherit', textDecoration: 'underline', marginLeft: '4px' }}>gabojapan@outlook.jp</a></p>
+            <p className="flex-align" style={{ color: 'rgba(255,255,255,0.7)', marginTop: '8px' }}><Mail size={18} className="mr-2" /> 이메일: <a href="mailto:gaboja@gabojapan.com" style={{ color: 'inherit', textDecoration: 'underline', marginLeft: '4px' }}>gaboja@gabojapan.com</a></p>
           </div>
         </div>
         <div className="footer-bottom">
