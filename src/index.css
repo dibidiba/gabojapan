@@ -547,6 +547,10 @@ ul {
   color: var(--primary-dark);
   margin-bottom: 24px;
 }
+.price.price-text {
+  font-size: 1.6rem;
+  letter-spacing: -0.5px;
+}
 .price span {
   font-size: 1rem;
   color: var(--text-light);

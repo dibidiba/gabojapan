@@ -239,7 +239,7 @@ function App() {
           <div className="pricing-grid">
             <div className="pricing-card">
               <h3>하네다 공항 픽업</h3>
-              <div className="price"><span>¥</span>25,000<span>~</span></div>
+              <div className="price price-text">맞춤 견적 상담</div>
               <ul className="pricing-features text-left">
                 <li><CheckCircle size={16} /> 도쿄 23구 내 편도 이동</li>
                 <li><CheckCircle size={16} /> 무료 대기 90분</li>
@@ -250,7 +250,7 @@ function App() {
             <div className="pricing-card popular">
               <div className="popular-badge">가장 인기</div>
               <h3>나리타 공항 픽업</h3>
-              <div className="price"><span>¥</span>35,000<span>~</span></div>
+              <div className="price price-text">맞춤 견적 상담</div>
               <ul className="pricing-features text-left">
                 <li><CheckCircle size={16} /> 도쿄 23구 내 편도 이동</li>
                 <li><CheckCircle size={16} /> 무료 대기 90분</li>
@@ -260,7 +260,7 @@ function App() {
             </div>
             <div className="pricing-card">
               <h3>맞춤 일일 투어</h3>
-              <div className="price"><span>¥</span>55,000<span>~</span></div>
+              <div className="price price-text">맞춤 견적 상담</div>
               <ul className="pricing-features text-left">
                 <li><CheckCircle size={16} /> 도쿄/후지산/하코네 (10h)</li>
                 <li><CheckCircle size={16} /> 일정 자유 조정</li>
