@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Plane, Map, Car, Shield, Phone, ChevronRight, Star, MapPin, CheckCircle, Mail, X } from 'lucide-react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './index.css';
 
 const heroImages = [
@@ -37,9 +37,6 @@ function App() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showLineQR, setShowLineQR] = useState(false);
 
-  const navigate = useNavigate();
-  const location = useLocation();
-
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -55,22 +52,26 @@ function App() {
     return () => clearInterval(interval);
   }, []);
 
+  const scrollToSection = (e: React.MouseEvent, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   useEffect(() => {
-    if (location.hash) {
-      const id = location.hash.replace('#', '');
+    const target = sessionStorage.getItem('scrollTo');
+    if (target) {
+      sessionStorage.removeItem('scrollTo');
       setTimeout(() => {
-        const element = document.getElementById(id);
+        const element = document.getElementById(target);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
-      }, 100);
+      }, 150);
     }
-  }, [location.pathname, location.hash]);
-
-  const handleNavClick = (e: React.MouseEvent, id: string) => {
-    e.preventDefault();
-    navigate(`/#${id}`);
-  };
+  }, []);
 
   return (
     <div className="app">
@@ -82,9 +83,9 @@ function App() {
             <span>GaboJapan</span>
           </div>
           <div className="nav-links">
-            <a href="#services" onClick={(e) => handleNavClick(e, 'services')}>서비스 안내</a>
-            <a href="#about" onClick={(e) => handleNavClick(e, 'about')}>특장점</a>
-            <a href="#pricing" onClick={(e) => handleNavClick(e, 'pricing')}>이용요금</a>
+            <a href="#services" onClick={(e) => scrollToSection(e, 'services')}>서비스 안내</a>
+            <a href="#about" onClick={(e) => scrollToSection(e, 'about')}>특장점</a>
+            <a href="#pricing" onClick={(e) => scrollToSection(e, 'pricing')}>이용요금</a>
             <Link to="/contact" className="btn btn-primary btn-sm">문의하기</Link>
           </div>
         </div>
@@ -118,7 +119,7 @@ function App() {
             <Link to="/contact" className="btn btn-primary btn-lg">
               간편 예약하기 <ChevronRight size={20} />
             </Link>
-            <a href="#services" onClick={(e) => handleNavClick(e, 'services')} className="btn btn-glass btn-lg">
+            <a href="#services" onClick={(e) => scrollToSection(e, 'services')} className="btn btn-glass btn-lg">
               서비스 둘러보기
             </a>
           </div>

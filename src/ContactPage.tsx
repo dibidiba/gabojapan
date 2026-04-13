@@ -16,7 +16,8 @@ function ContactPage() {
 
   const handleNavClick = (e: React.MouseEvent, id: string) => {
     e.preventDefault();
-    navigate(`/#${id}`);
+    sessionStorage.setItem('scrollTo', id);
+    navigate('/');
   };
 
   useEffect(() => {
